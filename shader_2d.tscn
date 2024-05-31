@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://ciug14ybdemtd"]
+
+[ext_resource type="Script" path="res://shader_2d.gd" id="1_0hyg4"]
+[ext_resource type="Texture2D" uid="uid://d0vmaj7236cj4" path="res://icon.svg" id="1_53gdi"]
+[ext_resource type="Shader" path="res://pattern.gdshader" id="2_v13h6"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lymh8"]
+shader = ExtResource("2_v13h6")
+shader_parameter/u_time = 2.08165e-12
+shader_parameter/u_resolution = Vector2(1024, 1024)
+shader_parameter/draw_color = Color(1, 1, 1, 1)
+shader_parameter/title = 3
+shader_parameter/alpha = true
+
+[node name="Shader2D" type="Node2D"]
+script = ExtResource("1_0hyg4")
+
+[node name="Icon" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_lymh8")
+position = Vector2(512, 512)
+scale = Vector2(8, 8)
+texture = ExtResource("1_53gdi")
