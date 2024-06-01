@@ -32,4 +32,3 @@ void fragment(){
 
     COLOR = vec4(color,1.0);
 }
-

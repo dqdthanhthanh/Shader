@@ -4,7 +4,7 @@ uniform float u_time;
 uniform vec2 u_resolution;
 
 
-float plot(vec2 st) {    
+float plot(vec2 st) {
     return smoothstep(0.02, 0.0, abs(st.y - st.x));
 }
 
@@ -20,14 +20,14 @@ void fragment() {
 		//output_color = vec4(1,1,1,1);
 	//}
 	//COLOR = output_color;
-	
+
 	// Time
 	//COLOR = vec4(abs(sin(u_time)),0.0,0.0,1.0);
-	
+
 	// Resolution
 	//vec2 st = FRAGCOORD.xy/u_resolution;
 	//COLOR = vec4(st.x,st.y,0.0,1.0);
-	
+
 	// Draw line
 	//vec2 st = FRAGCOORD.xy/u_resolution;
 	//float y = st.x;
@@ -36,7 +36,7 @@ void fragment() {
 	//float pct = plot(st);
 	//color = (1.0-pct)*color+pct*vec3(0.0,1.0,0.0);
 	//COLOR = vec4(color,1.0);
-	
+
 	//vec2 st = FRAGCOORD.xy/u_resolution.xy;
 	//vec2 st = vec2(UV.x, abs(UV.y-1.0));
 	float t = u_time;
@@ -55,7 +55,7 @@ void fragment() {
 		c[i]=.01/length(mod(uv,1.)-.5);
 	}
 	COLOR=vec4(c/l,t);
-	
+
 }
 
 //void light() {
