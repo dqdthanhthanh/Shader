@@ -20,3 +20,5 @@ material = SubResource("ShaderMaterial_lymh8")
 position = Vector2(512, 512)
 scale = Vector2(8, 8)
 texture = ExtResource("1_53gdi")
+
+[node name="Area2D" type="Area2D" parent="."]
